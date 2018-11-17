@@ -25,22 +25,27 @@ function genUrl(resourceName, params = {}) {
 
 /**
  * 请求 Marvel 资源
+ * 
+ * - Error Code 
+ *   - 409 - Missing API Key
+ *   - 409 - Missing Hash 
+ *   - 409 - Missing Timestamp 
+ *   - 401 - Invalid Referer 
+ *   - 401 - Invalid Hash 
+ *   - 405 - Method Not Allowed 
+ *   - 403 - Forbidden 
  */
-async function marRquest(resourceName, params = {}) {
+function marRquest(resourceName, params = {}) {
   console.log('queryCharacters, params = ', params)
-  try {
-    const url = genUrl(resourceName, params)
-    // res: the response of marvel api
-    const res = await wxRequest(url)
+  const url = genUrl(resourceName, params)
+
+  // res: the response of marvel api
+  return wxRequest(url).then(res => {
     if (res.code == 200) {
       return res.data
     }
     return Promise.reject(e)
-  } catch(e) {
-    return Promise.reject(e)
-  } finally {
-    console.log('queryCharacters, finish.')
-  }
+  })
 }
 
 export {

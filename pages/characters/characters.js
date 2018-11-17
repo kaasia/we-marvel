@@ -17,11 +17,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // queryCharacters().then(data => {
-    //   console.log('queryCharacters: data =', data)
-    // })
-
-    queryCharacters()
+    queryCharacters().then(data => {
+      console.log('queryCharacters: data =', data)
+    }).catch(e => {
+      console.log('queryCharacters: e =', e)
+    })
   },
 
   /**
