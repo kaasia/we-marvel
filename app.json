@@ -15,11 +15,15 @@
     "list": [
       {
         "pagePath": "pages/characters/characters",
-        "text": "角色"
+        "text": "角色",
+        "iconPath": "res/icons/iron_man_normal.png",
+        "selectedIconPath": "res/icons/iron_man_selected.png"
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "res/icons/captain_america_normal.png",
+        "selectedIconPath": "res/icons/captain_america_selected.png"
       }
     ]
   }
