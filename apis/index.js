@@ -1,9 +1,5 @@
 
 export {
-  marRquest,
-} from './marvel'
-
-export {
   queryCharacters,
   queryCharacterById,
   queryCharacterComics,

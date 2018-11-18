@@ -1,7 +1,7 @@
 
 import {
   marRquest,
-} from '../marvel'
+} from '../../marvel/index'
 
 /**
  * 查询漫画列表

@@ -1,7 +1,7 @@
 
 import {
   marRquest,
-} from '../marvel'
+} from '../../marvel/index'
 
 /**
  * 查询角色列表

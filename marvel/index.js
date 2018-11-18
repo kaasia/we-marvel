@@ -5,7 +5,7 @@ import {
 
 import {
   wxRequestIfStorage,
-} from './wx'
+} from '../wx/index'
 
 const BASE_URL = 'http://gateway.marvel.com/v1/public'
 const BASE_URL_S = 'https://gateway.marvel.com/v1/public'
