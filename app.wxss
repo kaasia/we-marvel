@@ -71,3 +71,15 @@ page {
   color: gray;
   text-align: right;
 }
+
+.item-loading {
+  padding: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-loading-text {
+  font-size: 24rpx;
+  color: gray;
+}

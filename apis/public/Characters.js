@@ -6,8 +6,8 @@ import {
 /**
  * 查询角色
  */
-function queryCharacters() {
-  return marRquest('/characters')
+function queryCharacters(params) {
+  return marRquest('/characters', params)
 }
 
 /**

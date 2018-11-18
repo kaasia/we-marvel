@@ -1,11 +1,17 @@
 <!--pages/characters.wxml-->
 <view class="container" >
-  <scroll-view class="scroll-view" scroll-y>
+  <scroll-view class="scroll-view" 
+    scroll-y
+    enable-back-to-top
+    lower-threshold="{{100}}"
+    bindscrolltolower="onScrollToLower"
+  >
     <view class="item" wx:for="{{characters}}" wx:for-item="item" wx:key="{{item.id}}" 
       data-character="{{item}}"
       bind:tap="onItemClick"
     >
       <image class="item-image"
+        lazy-load
         src="{{item.thumbnail.path + '/standard_fantastic.' + item.thumbnail.extension}}"
       />
       <view class="item-info">
@@ -13,6 +19,9 @@
         <text class="item-info-description">{{item.description}}</text>
         <text class="item-info-date">{{item.modified}}</text>
       </view>
+    </view>
+    <view class="item-loading" wx:if="{{isLoading}}">
+      <text class="item-loading-text">加载中..</text>
     </view>
   </scroll-view>
 </view>
