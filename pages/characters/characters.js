@@ -10,7 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    characters: [],
   },
 
   /**
@@ -19,6 +19,9 @@ Page({
   onLoad: function (options) {
     queryCharacters().then(data => {
       console.log('queryCharacters: data =', data)
+      this.setData({
+        characters: [...this.data.characters, ...data.results]
+      })
     }).catch(e => {
       console.log('queryCharacters: e =', e)
     })

@@ -1,2 +1,15 @@
 <!--pages/characters.wxml-->
-<text>pages/characters/characters.wxml</text>
+<view class="container" >
+  <scroll-view class="scroll-view" scroll-y>
+    <view class="item" wx:for="{{characters}}" wx:for-item="item" wx:key="{{item.id}}">
+      <image class="item-image"
+        src="{{item.thumbnail.path + '/standard_fantastic.' + item.thumbnail.extension}}"
+      />
+      <view class="item-info">
+        <text class="item-info-name">{{item.name}}</text>
+        <text class="item-info-description">{{item.description}}</text>
+        <text class="item-info-description">{{item.modified}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
