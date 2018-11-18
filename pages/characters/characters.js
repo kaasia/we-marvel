@@ -55,7 +55,7 @@ Page({
     const id = character.id
     const name = character.name
     wx.navigateTo({
-      url: `../comic/comic?id=${id}&name=${name}`
+      url: `../comics/comics?id=${id}&name=${name}`
     })
   },
 

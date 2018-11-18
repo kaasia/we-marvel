@@ -5,5 +5,9 @@ export {
 
 export {
   queryCharacters,
-  queryComic,
+  queryCharacter,
+  queryCharacterComics,
+  queryCharacterEvents,
+  queryCharacterSeries,
+  queryCharactersStories,
 } from './public/Characters'

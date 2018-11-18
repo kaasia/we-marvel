@@ -1,7 +1,7 @@
 // pages/comic/comic.js
 
 import {  
-  queryComic,
+  queryCharacterComics,
 } from '../../apis/index'
 
 
@@ -27,7 +27,7 @@ Page({
     })
 
     // 查询漫画数据
-    queryComic(id).then(data => {
+    queryCharacterComics(id).then(data => {
       console.log('queryComic: data =', data)
       this.setData({
         comics: [...this.data.comics, ...data.results]
