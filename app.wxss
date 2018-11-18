@@ -26,12 +26,11 @@ page {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: center;
-  padding: 8rpx;
+  align-items: flex-start;
+  padding: 16rpx;
   margin: 16rpx 32rpx;
   border-radius: 12rpx;
-  /* background-color: white; */
-  background-color: aqua;
+  background-color: white;
 }
 
 .item-image {
@@ -47,16 +46,25 @@ page {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-left: 8rpx;
+  margin-left: 16rpx;
 }
 
 .item-info-name {
   font-size: 32rpx;
   color: black;
+  display: flex;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .item-info-description {
+  height: 102rpx;
   font-size: 24rpx;
+  margin-top: 16rpx;
   color: gray;
   text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
@@ -67,6 +75,7 @@ page {
 }
 
 .item-info-date {
+  width: 450rpx;
   font-size: 24rpx;
   color: gray;
   text-align: right;
