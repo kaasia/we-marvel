@@ -5,7 +5,7 @@ export {
 
 export {
   queryCharacters,
-  queryCharacter,
+  queryCharacterById,
   queryCharacterComics,
   queryCharacterEvents,
   queryCharacterSeries,
@@ -14,7 +14,7 @@ export {
 
 export {
   queryComics,
-  queryComic,
+  queryComicById,
   queryComicCharacters,
   queryComicCreators,
   queryComicEvents,
@@ -24,7 +24,7 @@ export {
 
 export {
   queryCreators,
-  queryCreator,
+  queryCreatorById,
   queryCreatorCharacters,
   queryCreatorEvents,
   queryCreatorSeries,
@@ -33,10 +33,30 @@ export {
 
 export {
   queryEvents,
-  queryEvent,
+  queryEventById,
   queryEventCharacters,
   queryEventComics,
   queryEventCreators,
   queryEventSeries,
   queryEventStories,
 } from './public/events'
+
+export {
+  querySeries,
+  querySeriesById,
+  querySeriesCharacters,
+  querySeriesComics,
+  querySeriesCreators,
+  querySeriesEvents,
+  querySeriesStories,
+} from './public/series'
+
+export {
+  queryStories,
+  queryStoryById,
+  queryStoryCharacters,
+  queryStoryComics,
+  queryStoryCreators,
+  queryStoryEvents,
+  queryStorySeries,
+} from './public/stories'

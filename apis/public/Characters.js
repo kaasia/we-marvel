@@ -13,7 +13,7 @@ function queryCharacters(params) {
 /**
  * 查询 - 角色
  */
-function queryCharacter(characterId, params) {
+function queryCharacterById(characterId, params) {
   return marRquest(`/characters/${characterId}`, params)
 }
 
@@ -48,7 +48,7 @@ function queryCharacterStories(characterId, params) {
 
 export {
   queryCharacters,
-  queryCharacter,
+  queryCharacterById,
   queryCharacterComics,
   queryCharacterEvents,
   queryCharacterSeries,

@@ -13,7 +13,7 @@ function queryComics(params) {
 /**
  * 查询 - 漫画
  */
-function queryComic(comicId, params) {
+function queryComicById(comicId, params) {
   return marRquest(`/comics/${comicId}`, params)
 }
 
@@ -62,7 +62,7 @@ function queryComicStories(comicId, params) {
 
 export {
   queryComics,
-  queryComic,
+  queryComicById,
   queryComicCharacters,
   queryComicCreators,
   queryComicEvents,

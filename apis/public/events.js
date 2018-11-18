@@ -13,7 +13,7 @@ function queryEvents(params) {
 /**
  * 查询 - 事件
  */
-function queryEvent(eventId, params) {
+function queryEventById(eventId, params) {
   return marRquest(`/events/${eventId}`, params)
 }
 
@@ -55,7 +55,7 @@ function queryEventStories(eventId, params) {
 
 export {
   queryEvents,
-  queryEvent,
+  queryEventById,
   queryEventCharacters,
   queryEventComics,
   queryEventCreators,

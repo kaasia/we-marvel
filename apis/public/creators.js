@@ -13,7 +13,7 @@ function queryCreators(params) {
 /**
  * 查询 - 作者
  */
-function queryCreator(creatorId, params) {
+function queryCreatorById(creatorId, params) {
   return marRquest(`/creators/${creatorId}`, params)
 }
 
@@ -48,7 +48,7 @@ function queryCreatorStories(creatorId, params) {
 
 export {
   queryCreators,
-  queryCreator,
+  queryCreatorById,
   queryCreatorCharacters,
   queryCreatorEvents,
   queryCreatorSeries,
