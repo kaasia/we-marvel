@@ -1,0 +1,16 @@
+<template name="item">
+  <view class="item" 
+    data-character="{{item}}"
+    bind:tap="onItemClick"
+  >
+    <image class="item-image"
+      lazy-load
+      src="{{item.thumbnail.path + '/standard_fantastic.' + item.thumbnail.extension}}"
+    />
+    <view class="item-info">
+      <text class="item-info-name">{{item.name}}</text>
+      <text class="item-info-description">{{item.description}}</text>
+      <text class="item-info-date">{{item.modified}}</text>
+    </view>
+  </view>
+</template>

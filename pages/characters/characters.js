@@ -4,14 +4,16 @@ import {
   queryCharacters,
 } from '../../apis/index'
 
+let offset = 0
+let characters = []
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    offset: 0,
-    characters: [],
+    items: [],
     isLoading: false,
   },
 
@@ -23,14 +25,26 @@ Page({
       isLoading: true,
     })
 
-    const offset = this.data.offset
     queryCharacters({
       offset: offset,
     }).then(data => {
       console.log('queryCharacters: data =', data)
+      const newCharacters = [...data.results]
+      characters = [...characters, ...newCharacters]
+      offset = offset + 20
+
+      const newItems = []
+      for(const nc of newCharacters) {
+        newItems.push({
+          id: nc.id, 
+          thumbnail: nc.thumbnail,
+          name: nc.name, 
+          description: nc.description, 
+          modified: nc.modified,
+        })
+      }
       this.setData({
-        offset: offset + 20,
-        characters: [...this.data.characters, ...data.results],
+        items: [...this.data.items, ...newItems],
         isLoading: false,
       })
     }).catch(e => {

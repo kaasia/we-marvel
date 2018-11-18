@@ -4,6 +4,8 @@ import {
   queryCharacterComics,
 } from '../../apis/index'
 
+let offset = 0
+let comics = []
 
 Page({
 
@@ -11,7 +13,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    comics: [],
+    items: [],
+    isLoading: false,
+  },
+
+  /**
+   * 查询漫画数据
+   * 
+   * @param {number} id 
+   */
+  queryCharacterComicsWithParams(id) {
+    queryCharacterComics(id, {
+      offset: offset,
+    }).then(data => {
+      console.log('queryCharacterComicsWithParams: data =', data)
+      const newComics = [...data.results]
+      comics = [...comics, ...newComics]
+      offset = offset + 20
+
+      const newItems = []
+      for(const nc of newComics) {
+        newItems.push({
+          id: nc.id, 
+          thumbnail: nc.thumbnail,
+          name: nc.title, 
+          description: nc.description, 
+          modified: nc.modified,
+        })
+      }
+      this.setData({
+        items: [...this.data.items, ...newItems],
+        isLoading: false,
+      })
+    }).catch(e => {
+      console.log('queryCharacterComicsWithParams: e =', e)
+    })
   },
 
   /**
@@ -23,18 +59,11 @@ Page({
 
     // 设置标题
     wx.setNavigationBarTitle({
-      title: name
+      title: name,
     })
 
     // 查询漫画数据
-    queryCharacterComics(id).then(data => {
-      console.log('queryComic: data =', data)
-      this.setData({
-        comics: [...this.data.comics, ...data.results]
-      })
-    }).catch(e => {
-      console.log('queryComic: e =', e)
-    })
+    this.queryCharacterComicsWithParams(id)
   },
 
 })
