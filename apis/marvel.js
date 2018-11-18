@@ -7,7 +7,8 @@ import {
   wxRequest,
 } from './wx'
 
-const BASE_URL = 'https://gateway.marvel.com/v1/public'
+const BASE_URL = 'http://gateway.marvel.com/v1/public'
+const BASE_URL_S = 'https://gateway.marvel.com/v1/public'
 
 const API_PUBLIC_KEY = '4dc572fd2a705860fabc560e57fa2ba9'
 const API_PRIVATE_KEY = '1599c9b56b2d6766c5466371ca404d784310ab69'
@@ -19,7 +20,8 @@ function genUrl(resourceName, params = {}) {
 
   // todo: init patams
   const paramsStr = ''
-  const url = `${BASE_URL}/${resourceName}?${paramsStr}&ts=${ts}&apikey=${API_PUBLIC_KEY}&hash=${hashValue}`
+  let newResourceName = resourceName.replace(BASE_URL, '').replace(BASE_URL_S, '')
+  const url = `${BASE_URL_S}${newResourceName}?${paramsStr}&ts=${ts}&apikey=${API_PUBLIC_KEY}&hash=${hashValue}`
   return url
 }
 

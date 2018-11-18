@@ -1,7 +1,8 @@
-<!--pages/characters.wxml-->
+<!--pages/comic/comic.wxml-->
+
 <view class="container" >
   <scroll-view class="scroll-view" scroll-y>
-    <view class="item" wx:for="{{characters}}" wx:for-item="item" wx:key="{{item.id}}" 
+    <view class="item" wx:for="{{comics}}" wx:for-item="item" wx:key="{{item.id}}" 
       data-character="{{item}}"
       bind:tap="onItemClick"
     >
@@ -9,10 +10,11 @@
         src="{{item.thumbnail.path + '/standard_fantastic.' + item.thumbnail.extension}}"
       />
       <view class="item-info">
-        <text class="item-info-name">{{item.name}}</text>
+        <text class="item-info-name">{{item.title}}</text>
         <text class="item-info-description">{{item.description}}</text>
         <text class="item-info-date">{{item.modified}}</text>
       </view>
     </view>
   </scroll-view>
 </view>
+
