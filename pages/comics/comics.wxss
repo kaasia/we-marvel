@@ -1,3 +1,2 @@
 /* pages/comic/comic.wxss */
 
-@import "../../templates/item/item.wxss";

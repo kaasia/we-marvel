@@ -1,0 +1,8 @@
+
+<template name="loading">
+  <view class="loading" >
+    <text class="loading-text" wx:if="{{isLoading}}">加载中..</text>
+    <text class="loading-text" wx:elif="{{isAllLoaded}}">已全部加载</text>
+    <text class="loading-text" wx:else>上拉加载</text>
+  </view>
+</template>

@@ -1,0 +1,11 @@
+.loading {
+  padding: 16rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-text {
+  font-size: 24rpx;
+  color: gray;
+}
