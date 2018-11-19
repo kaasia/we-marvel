@@ -1,0 +1,46 @@
+<!--pages/comic/comic.wxml-->
+
+<view class="container" >
+  <scroll-view class="scroll-view"
+    scroll-y
+    enable-back-to-top
+  >
+    <view class="view-title">
+      <text class="title">{{comic.title}}</text>
+    </view>
+    
+    <view class="view-1">
+      <image class="thumbnail"
+        src="{{comic.thumbnail.path + '/portrait_uncanny.' + comic.thumbnail.extension}}"
+      />
+      <view class="view-2">
+        <view class="view-label-value">
+          <text class="label">pageCount:</text>
+          <text class="value">{{comic.pageCount}}</text>
+        </view>
+        <block wx:for="{{comic.prices}}" wx:for-item="price" wx:key="{{price.type}}">
+          <view class="view-label-value">
+            <text class="label">{{price.type}}:</text>
+            <text class="value">{{price.price}}</text>
+          </view>
+        </block>
+        <view class="view-label-value">
+          <text class="label">modified:</text>
+          <text class="value">{{comic.modified}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="sub-view">
+      <text class="sub-title">description</text>
+      <text class="sub-content">{{comic.description}}</text>
+    </view>
+
+    <block wx:for="{{comic.textObjects}}" wx:for-item="textObject" wx:key="{{textObject.type}}">
+      <view class="sub-view">
+        <text class="sub-title">{{textObject.type}}</text>
+        <text class="sub-content">{{textObject.text}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>

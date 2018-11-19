@@ -1,6 +1,6 @@
 <template name="item">
   <view class="item" 
-    data-character="{{item}}"
+    data-item="{{item}}"
     bind:tap="onItemClick"
   >
     <image class="item-image"

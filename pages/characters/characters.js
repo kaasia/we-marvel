@@ -65,9 +65,9 @@ Page({
    */
   onItemClick(e) {
     console.log('e = ', e)
-    const character = e.currentTarget.dataset.character
-    const id = character.id
-    const name = character.name
+    const item = e.currentTarget.dataset.item
+    const id = item.id
+    const name = item.name
     wx.navigateTo({
       url: `../comics/comics?id=${id}&name=${name}`
     })

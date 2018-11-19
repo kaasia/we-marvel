@@ -2,8 +2,8 @@
   "pages": [
     "pages/characters/characters",
     "pages/mine/mine",
-    
-    "pages/comics/comics"
+    "pages/comics/comics",
+    "pages/comic/comic"
   ],
   "window": {
     "backgroundTextStyle": "light",

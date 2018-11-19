@@ -1,5 +1,11 @@
 //app.js
 App({
+
+  globalData: {
+    /** 漫画详情数据 */
+    comic: undefined,
+  },
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

@@ -1,0 +1,68 @@
+/* pages/comic/comic.wxss */
+
+.view-1 {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 32rpx;
+}
+
+.view-2 {
+  display: flex;
+  width: 270rpx;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 12rpx;
+}
+
+.view-title {
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  margin-top: 32rpx;
+}
+
+.title {
+  color: black;
+}
+
+.thumbnail {
+  width: 300rpx;
+  height: 450rpx;
+  background-color: '#eeeeee'
+}
+
+.view-label-value {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12rpx;
+}
+
+.label {
+  color: gray;
+  font-weight: bold;
+  font-size: 24rpx;
+}
+
+.value {
+  color: gray;
+  font-size: 24rpx;
+}
+
+.sub-view {
+  display: flex;
+  flex-direction: column;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.sub-title {
+  color: black;
+  font-size: 30rpx;
+}
+
+.sub-content {
+  color: gray;
+  font-size: 26rpx;
+  margin-top: 12rpx;
+}

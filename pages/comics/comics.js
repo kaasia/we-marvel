@@ -4,6 +4,7 @@ import {
   queryCharacterComics,
 } from '../../apis/index'
 
+const app = getApp()
 
 Page({
 
@@ -77,6 +78,26 @@ Page({
   onScrollToLower: function() {
     console.log('onScrollToLower')
     this.queryCharacterComicsWithParams(this.id)
+  },
+
+  /**
+   * 点击列表项时回调
+   */
+  onItemClick(e) {
+    console.log('e = ', e)
+    const item = e.currentTarget.dataset.item
+    let comic = undefined
+    for (const c of this.comics) {
+      if (c.id == item.id) {
+        comic = c
+        break
+      }
+    }
+    app.globalData.comic = comic
+    
+    wx.navigateTo({
+      url: `../comic/comic?id=${comic.id}&title=${comic.title}`
+    })
   },
 
   /**
