@@ -1,5 +1,8 @@
 <!--pages/comic/comic.wxml-->
 
+<import src="../../templates/resources/resources.wxml"/>
+<import src="../../templates/subtitle/subtitle.wxml"/>
+
 <view class="container" >
   <scroll-view class="scroll-view"
     scroll-y
@@ -21,7 +24,7 @@
         <block wx:for="{{comic.prices}}" wx:for-item="price" wx:key="{{price.type}}">
           <view class="view-label-value">
             <text class="label">{{price.type}}:</text>
-            <text class="value">{{price.price}}</text>
+            <text class="value">${{price.price}}</text>
           </view>
         </block>
         <view class="view-label-value">
@@ -32,15 +35,36 @@
     </view>
 
     <view class="sub-view">
-      <text class="sub-title">description</text>
+      <template is="subtitle" data="{{name: 'description'}}" /> 
       <text class="sub-content">{{comic.description}}</text>
     </view>
 
     <block wx:for="{{comic.textObjects}}" wx:for-item="textObject" wx:key="{{textObject.type}}">
       <view class="sub-view">
-        <text class="sub-title">{{textObject.type}}</text>
+        <template is="subtitle" data="{{name: textObject.type}}" />
         <text class="sub-content">{{textObject.text}}</text>
       </view>
     </block>
+
+    <template is="subtitle" data="{{name: 'creators'}}" /> 
+    <template is="resources" data="{{type: 'creators', items: comic.creators.items}}"/> 
+    
+    <template is="subtitle" data="{{name: 'characters'}}" /> 
+    <template is="resources" data="{{type: 'characters', items: comic.characters.items}}"/> 
+
+    <template is="subtitle" data="{{name: 'stories'}}" /> 
+    <template is="resources" data="{{type: 'stories', items: comic.stories.items}}" /> 
+
+    <template is="subtitle" data="{{name: 'events'}}" /> 
+    <template is="resources" data="{{type: 'stories', items: comic.events.items}}"/> 
+
+    <block wx:for="{{comic.images}}" wx:for-item="image" wx:key="{{image.path}}">
+      <image class="image"
+        src="{{image.path + '/detail.' + image.extension}}"
+      />
+    </block>
+
+    <view class="footer"/>
+
   </scroll-view>
 </view>

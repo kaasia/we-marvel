@@ -1,0 +1,16 @@
+
+<template name="resources">
+  <scroll-view class="resources" scroll-x>
+    <block wx:for="{{items}}" wx:for-item="item"  wx:for-index="index" wx:key="{{item.name}}">
+      <view class="resource" 
+        style="margin-right: {{index == items.length - 1 ? '32rpx' : '0'}};"
+        data-type="{{type}}" 
+        data-resourceURI="{{item.resourceURI}}" 
+        bindtap="onResourceItemClick"
+      >
+        <text class="resource-name" 
+        >{{item.name}}</text>
+      </view>  
+    </block>
+  </scroll-view>
+</template>

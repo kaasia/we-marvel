@@ -1,0 +1,7 @@
+
+<template name="subtitle">
+  <view class="subtitle" >
+    <text class="subtitle-line"></text>
+    <text class="subtitle-text">{{name}}</text>
+  </view>
+</template>

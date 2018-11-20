@@ -1,0 +1,23 @@
+
+
+.resources {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.resource {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 12rpx;
+  padding: 12rpx 16rpx;
+  margin-left: 32rpx;
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.resource-name {
+  font-size: 24rpx;
+  color: gray;
+}

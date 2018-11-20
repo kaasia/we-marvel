@@ -2,6 +2,8 @@
 
 @import "./templates/item/item.wxss";
 @import "./templates/loading/loading.wxss";
+@import "./templates/resources/resources.wxss";
+@import "./templates/subtitle/subtitle.wxss";
 
 /* reset */
 page {

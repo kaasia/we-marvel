@@ -51,18 +51,26 @@
 .sub-view {
   display: flex;
   flex-direction: column;
-  margin-left: 32rpx;
-  margin-right: 32rpx;
-  margin-bottom: 32rpx;
-}
-
-.sub-title {
-  color: black;
-  font-size: 30rpx;
 }
 
 .sub-content {
   color: gray;
   font-size: 26rpx;
   margin-top: 12rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  margin-bottom: 32rpx;
+}
+
+.image {
+  width: 686rpx;
+  height: 1041rpx;
+  margin-top: 36rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  background-color: '#eeeeee'
+}
+
+.footer {
+  height: 32rpx;
 }
