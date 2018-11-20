@@ -1,6 +1,7 @@
 
 export {
   formatTime,
+  formatDate,
 } from './FormatUtil'
 
 export {

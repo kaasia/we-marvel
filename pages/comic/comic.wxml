@@ -28,8 +28,16 @@
           </view>
         </block>
         <view class="view-label-value">
+          <text class="label">diamondCode:</text>
+          <text class="value">{{comic.diamondCode}}</text>
+        </view>
+        <view class="view-label-value">
+          <text class="label">issueNumber:</text>
+          <text class="value">{{comic.issueNumber}}</text>
+        </view>
+        <view class="view-label-value">
           <text class="label">modified:</text>
-          <text class="value">{{comic.modified}}</text>
+          <text class="value">{{modifiedFormatted}}</text>
         </view>
       </view>
     </view>

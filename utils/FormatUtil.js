@@ -1,6 +1,8 @@
 
 /**
  * 格式化时间
+ * 
+ * @returns 如 2013/10/25 02:32:08
  */
 const formatTime = date => {
   const year = date.getFullYear()
@@ -14,6 +16,24 @@ const formatTime = date => {
 }
 
 /**
+ * 格式化时间
+ * 
+ * @returns 如 2013-10-25
+ */
+const formatDate = date => {
+  const year = date.getFullYear()
+  const month = date.getMonth() + 1
+  const day = date.getDate()
+
+  if (isNaN(year) || isNaN(month) || isNaN(day)) {
+    return '...'
+  }
+
+  const result = [year, month, day].map(formatNumber).join('-')
+  return result === '1970-01-01' ? `before ${result}` : result
+}
+
+/**
  * 格式化数字
  */
 const formatNumber = n => {
@@ -23,4 +43,5 @@ const formatNumber = n => {
 
 export {
   formatTime,
+  formatDate,
 }

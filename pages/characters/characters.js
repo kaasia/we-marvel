@@ -4,6 +4,10 @@ import {
   queryCharacters,
 } from '../../apis/index'
 
+import {
+  formatDate,
+} from '../../utils/index'
+
 let offset = 0
 let characters = []
 
@@ -39,8 +43,8 @@ Page({
           id: nc.id, 
           thumbnail: nc.thumbnail,
           name: nc.name, 
-          description: nc.description, 
-          modified: nc.modified,
+          description: nc.description ? nc.description : '...', 
+          modified: formatDate(new Date(nc.modified)),
         })
       }
       this.setData({

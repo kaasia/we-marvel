@@ -1,5 +1,9 @@
 // pages/comic/comic.js
 
+import {
+  formatDate,
+} from '../../utils/index'
+
 const app = getApp()
 
 Page({
@@ -8,6 +12,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    modifiedFormatted: '',
     comic: undefined,
   },
 
@@ -20,6 +25,7 @@ Page({
     
     console.log('this.comic = ', comic)
     this.setData({
+      modifiedFormatted: formatDate(new Date(comic.modified)),
       comic: comic,
     })
   },

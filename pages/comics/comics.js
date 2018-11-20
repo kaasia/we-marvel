@@ -4,6 +4,10 @@ import {
   queryCharacterComics,
 } from '../../apis/index'
 
+import {
+  formatDate,
+} from '../../utils/index'
+
 const app = getApp()
 
 Page({
@@ -58,8 +62,8 @@ Page({
           id: nc.id, 
           thumbnail: nc.thumbnail,
           name: nc.title, 
-          description: nc.description, 
-          modified: nc.modified,
+          description: nc.description ? nc.description : '...', 
+          modified: formatDate(new Date(nc.modified)),
         })
       }
       this.setData({
