@@ -74,3 +74,26 @@
 .footer {
   height: 32rpx;
 }
+
+.urls {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.url {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12rpx;
+  padding: 12rpx 16rpx;
+  margin-left: 32rpx;
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+  background-color: white;
+}
+
+.url-text {
+  font-size: 26rpx;
+  color: red;
+  align-content: center;
+}

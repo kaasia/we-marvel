@@ -42,6 +42,18 @@
       </view>
     </view>
 
+    <scroll-view class="urls" scroll-x>
+      <block wx:for="{{comic.urls}}" wx:for-item="url"  wx:for-index="index" wx:key="{{url.type}}">
+        <view 
+          class="url"
+          data-url="{{url.url}}"
+          bindtap="onUrlClick"
+        >
+          <text class="url-text">{{url.type}}</text>
+        </view>
+      </block>
+    </scroll-view>
+
     <view class="sub-view">
       <template is="subtitle" data="{{name: 'description'}}" /> 
       <text class="sub-content">{{comic.description}}</text>

@@ -5,7 +5,7 @@
       <view class="resource" 
         style="margin-right: {{index == items.length - 1 ? '32rpx' : '0'}};"
         data-type="{{type}}" 
-        data-resourceURI="{{item.resourceURI}}" 
+        data-resourceuri="{{item.resourceURI}}" 
         bindtap="onResourceItemClick"
       >
         <text class="resource-name" 
