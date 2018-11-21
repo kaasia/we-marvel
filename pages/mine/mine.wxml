@@ -10,41 +10,61 @@
 <view class="container">
   <scroll-view class="scroll-view">
     <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
+      <block wx:if="{{!hasUserInfo && canIUse}}">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="/res/ic_marvel.jpg" background-size="cover"></image>
+        <text class="userinfo-nickname">MARVEL</text>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
 
   <view class="signature">
-    <text class="signature-text">Hello Marvel Universe</text>
+    <text class="signature-text">我相信每个人心中都住着一个英雄</text>
   </view>
 
   <view class="collection">
     <view class="card-title">
       <text class="card-title-text">我的收藏</text>
-      <text class="card-title-btn">更多>></text>
+      <text class="card-title-btn">查看全部 ></text>
     </view>
     <view class="card-divider"/>
     <view class="card-content">
       <view class="card-content-item">
         <template is="image-title-btn" data="{{image: '/res/ic_iron_man.png', text: '漫画'}}" />
-        <template is="image-title-btn" data="{{image: '/res/ic_spider_man.png', text: '英雄'}}" />
-        <template is="image-title-btn" data="{{image: '/res/ic_green_man.png', text: '图鉴'}}" />
-        <template is="image-title-btn" data="{{image: '/res/ic_wolverine.png', text: '壁纸'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_wolverine.png', text: '英雄'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_spider_man.png', text: '图鉴'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_green_man.png', text: '壁纸'}}" />
         <template is="image-title-btn" data="{{image: '/res/ic_captain_america.png', text: '视频'}}" />
       </view>
     </view>
   </view>
 
   <view class="collection">
-    <text>分享</text>
-    <text>帮助</text>
-    <text>反馈</text>
-    <text>设置</text>
-    <text>关于</text>
+    <view class="card-title">
+      <text class="card-title-text">更多功能</text>
+      <text class="card-title-btn">为你而来 ></text>
+    </view>
+    <view class="card-divider"/>
+    <view class="card-content">
+      <view class="card-content-item">
+        <template is="image-title-btn" data="{{image: '/res/ic_search.png', text: '搜索'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_share.png', text: '分享'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_about.png', text: '历史'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_admire.png', text: '赞赏'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_wiki.png', text: '百科'}}" />
+      </view>
+      <view class="card-content-item">
+        <template is="image-title-btn" data="{{image: '/res/ic_cache.png', text: '缓存'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_help.png', text: '帮助'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_feedback.png', text: '反馈'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_settings.png', text: '设置'}}" />
+        <template is="image-title-btn" data="{{image: '/res/ic_about.png', text: '关于'}}" />
+      </view>
+    </view>
   </view>
+
 
   </scroll-view>
 </view>
