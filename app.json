@@ -2,9 +2,9 @@
   "pages": [
     "pages/mine/mine",
     "pages/characters/characters",
-    
     "pages/comics/comics",
-    "pages/comic/comic"
+    "pages/comic/comic",
+    "pages/explore/explore"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -23,6 +23,12 @@
         "text": "首页",
         "iconPath": "res/ic_home_grey.png",
         "selectedIconPath": "res/ic_home_red.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "发现",
+        "iconPath": "res/ic_store_grey.png",
+        "selectedIconPath": "res/ic_store_red.png"
       },
       {
         "pagePath": "pages/mine/mine",
