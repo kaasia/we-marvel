@@ -4,6 +4,7 @@ App({
   globalData: {
     /** 漫画详情数据 */
     comic: undefined,
+    userInfo: null,
   },
 
   onLaunch: function () {
@@ -39,7 +40,5 @@ App({
       }
     })
   },
-  globalData: {
-    userInfo: null
-  }
+  
 })
