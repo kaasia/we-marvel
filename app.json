@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/mine/mine",
+    "pages/explore/explore",
     "pages/characters/characters",
+    "pages/mine/mine",
     "pages/comics/comics",
-    "pages/comic/comic",
-    "pages/explore/explore"
+    "pages/comic/comic"
   ],
   "window": {
     "backgroundTextStyle": "light",

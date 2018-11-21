@@ -1,2 +1,22 @@
 <!--pages/explore/explore.wxml-->
-<text>pages/explore/explore.wxml</text>
+
+<import src="../../templates/subtitle/subtitle.wxml"/>
+
+<view>
+
+
+  <template is="subtitle" data="{{name: '英雄'}}" /> 
+
+
+  <template is="subtitle" data="{{name: '图鉴'}}" /> 
+
+
+  <template is="subtitle" data="{{name: '壁纸'}}" /> 
+
+
+  <template is="subtitle" data="{{name: '视频'}}" /> 
+
+
+</view>
+
+
