@@ -24,6 +24,7 @@ a mini program on wechat through the open api proided by Marvel.
 | -- | -- | --
 | ![](./screenshots/1-home.png) | ![](./screenshots/1-explore.png) | ![](./screenshots/1-mine.png)
 
+
 ## 待办
 
 * [ ] 优化首页漫画信息查看功能，及将部分内容改成中文。
@@ -35,6 +36,12 @@ a mini program on wechat through the open api proided by Marvel.
 * [ ] 完成收藏、工具等功能的开发。
   * [ ] 我的收藏
   * [ ] 更多工具
+
+
+## 文档
+
+* [漫威官方：文档概述](./docs/marvel/overview/)
+* [漫威来了：文档概述](./docs/weapp/overview/)
 
 
 ## License
